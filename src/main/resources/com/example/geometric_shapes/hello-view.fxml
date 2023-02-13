@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.geometric_shapes.HelloController">
+  <tabs>
+    <Tab text="Circle">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <Label layoutX="15.0" layoutY="19.0" prefHeight="32.0" prefWidth="218.0" text="Enter the radius of circle" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <TextField fx:id="Circle_Radius" layoutX="257.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </TextField>
+          <Label layoutX="22.0" layoutY="270.0" prefHeight="40.0" prefWidth="117.0" text="Area :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Circle_Circumference" layoutX="210.0" layoutY="186.0" prefHeight="34.0" prefWidth="191.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Pane layoutX="434.0" prefHeight="370.0" prefWidth="166.0" style="-fx-background-color: #214c91;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="28.0" layoutY="291.0" mnemonicParsing="false" onAction="#circleCalculate" prefHeight="26.0" prefWidth="110.0" text="Calculate " textFill="#214c91" />
+                  <ImageView fitHeight="110.0" fitWidth="168.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Hello/Shape.png" />
+                     </image>
+                  </ImageView>
+          </Pane>
+          <Label fx:id="Circle_Area" layoutX="214.0" layoutY="276.0" prefHeight="33.0" prefWidth="192.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Label layoutX="19.0" layoutY="184.0" prefHeight="41.0" prefWidth="128.0" text="Circumference :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+               <Label fx:id="Circle_error" layoutX="257.0" layoutY="67.0" prefHeight="16.0" prefWidth="170.0" textFill="RED" />
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Cylinder">
+      <content>
+        <AnchorPane>
+        <Label layoutX="15.0" layoutY="19.0" prefHeight="32.0" prefWidth="218.0" text="Enter the radius of cylinder" textFill="#214c91">
+          <font>
+            <Font name="System Italic" size="18.0" />
+          </font>
+        </Label>
+        <TextField fx:id="Cylinder_radius" layoutX="256.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0">
+          <font>
+            <Font size="14.0" />
+          </font>
+        </TextField>
+        <Label layoutX="12.0" layoutY="67.0" prefHeight="30.0" prefWidth="238.0" text="Enter the height of cylinder" textFill="#214c91">
+          <font>
+            <Font name="System Italic" size="18.0" />
+          </font>
+        </Label>
+        <TextField fx:id="Cylinder_Height" layoutX="256.0" layoutY="67.0" prefHeight="25.0" prefWidth="175.0">
+          <font>
+            <Font size="14.0" />
+          </font>
+        </TextField>
+        <Label layoutX="14.0" layoutY="213.0" prefHeight="40.0" prefWidth="117.0" text="Area :" textFill="#214c91">
+          <font>
+            <Font name="System Italic" size="18.0" />
+          </font>
+        </Label>
+        <Label fx:id="Cylinder_Area" layoutX="233.0" layoutY="214.0" prefHeight="33.0" prefWidth="192.0">
+          <font>
+            <Font size="14.0" />
+          </font>
+        </Label>
+        <Pane layoutX="434.0" prefHeight="370.0" prefWidth="166.0" style="-fx-background-color: #214c91;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <Button layoutX="28.0" layoutY="291.0" mnemonicParsing="false" onAction="#cylinderCalculate" prefHeight="26.0" prefWidth="110.0" text="Calculate " textFill="#214c91" />
+          <ImageView fitHeight="117.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+              <Image url="@Hello/Shape.png" />
+            </image>
+          </ImageView>
+        </Pane>
+        <Label layoutX="15.0" layoutY="297.0" prefHeight="31.0" prefWidth="138.0" text="Volume :" textFill="#214c91">
+          <font>
+            <Font name="System Italic" size="18.0" />
+          </font>
+        </Label>
+        <Label fx:id="Cylinder_volume" layoutX="233.0" layoutY="304.0" prefHeight="36.0" prefWidth="157.0">
+          <font>
+            <Font size="14.0" />
+          </font>
+        </Label>
+               <Label fx:id="Cylinder_error" layoutX="256.0" layoutY="115.0" prefHeight="10.0" prefWidth="177.0" textFill="RED" />
+      </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Square">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <Label layoutX="15.0" layoutY="19.0" prefHeight="32.0" prefWidth="218.0" text="Enter one side of square" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <TextField fx:id="Square_Side" layoutX="257.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </TextField>
+          <Label layoutX="22.0" layoutY="270.0" prefHeight="40.0" prefWidth="117.0" text="Area :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Square_Circumference" layoutX="210.0" layoutY="186.0" prefHeight="34.0" prefWidth="191.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Pane layoutX="434.0" prefHeight="370.0" prefWidth="166.0" style="-fx-background-color: #214c91;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="28.0" layoutY="291.0" mnemonicParsing="false" onAction="#SquareCalculate" prefHeight="26.0" prefWidth="110.0" text="Calculate " textFill="#214c91" />
+            <ImageView fitHeight="117.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@Hello/Shape.png" />
+              </image>
+            </ImageView>
+          </Pane>
+          <Label fx:id="Square_Area" layoutX="214.0" layoutY="276.0" prefHeight="33.0" prefWidth="192.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Label layoutX="19.0" layoutY="184.0" prefHeight="41.0" prefWidth="128.0" text="Circumference :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+               <Label fx:id="Square_error" layoutX="257.0" layoutY="69.0" prefHeight="23.0" prefWidth="176.0" textFill="RED" />
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Cube">
+      <content>
+        <AnchorPane>
+          <Label layoutX="16.0" layoutY="19.0" prefHeight="32.0" prefWidth="218.0" text="Enter one side of cube" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <TextField fx:id="Cube_Side" layoutX="256.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </TextField>
+          <Label layoutX="14.0" layoutY="213.0" prefHeight="40.0" prefWidth="117.0" text="Area :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Cube_Area" layoutX="233.0" layoutY="214.0" prefHeight="33.0" prefWidth="192.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Pane layoutX="434.0" prefHeight="370.0" prefWidth="166.0" style="-fx-background-color: #214c91;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="28.0" layoutY="291.0" mnemonicParsing="false" onAction="#CubeCalculate" prefHeight="26.0" prefWidth="110.0" text="Calculate " textFill="#214c91" />
+            <ImageView fitHeight="117.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@Hello/Shape.png" />
+              </image>
+            </ImageView>
+          </Pane>
+          <Label layoutX="15.0" layoutY="297.0" prefHeight="31.0" prefWidth="138.0" text="Volume :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Cube_Volume" layoutX="233.0" layoutY="304.0" prefHeight="36.0" prefWidth="157.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+               <Label fx:id="Cube_error" layoutX="256.0" layoutY="65.0" prefHeight="18.0" prefWidth="176.0" textFill="RED" />
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Rectangle">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <Label layoutX="15.0" layoutY="19.0" prefHeight="32.0" prefWidth="242.0" text="Enter the height of rectangle" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <TextField fx:id="Rectangle_Height" layoutX="257.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </TextField>
+          <Label layoutX="22.0" layoutY="270.0" prefHeight="40.0" prefWidth="117.0" text="Area :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Rectangle_Area" layoutX="210.0" layoutY="186.0" prefHeight="34.0" prefWidth="191.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Pane layoutX="434.0" prefHeight="370.0" prefWidth="166.0" style="-fx-background-color: #214c91;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="28.0" layoutY="291.0" mnemonicParsing="false" onAction="#RectangleCalculate" prefHeight="26.0" prefWidth="110.0" text="Calculate " textFill="#214c91" />
+            <ImageView fitHeight="117.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@Hello/Shape.png" />
+              </image>
+            </ImageView>
+          </Pane>
+          <Label fx:id="Rectangle_Circumference" layoutX="214.0" layoutY="276.0" prefHeight="33.0" prefWidth="192.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Label layoutX="19.0" layoutY="184.0" prefHeight="41.0" prefWidth="128.0" text="Circumference :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+               <Label layoutX="15.0" layoutY="64.0" prefHeight="31.0" prefWidth="232.0" text="Enter the width of rectangle" textFill="#214c91">
+                  <font>
+                     <Font name="System Italic" size="18.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="Rectangle_Width" layoutX="258.0" layoutY="69.0" prefHeight="30.0" prefWidth="174.0">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </TextField>
+               <Label fx:id="Rectangle_error" layoutX="258.0" layoutY="107.0" prefHeight="21.0" prefWidth="169.0" textFill="RED" />
+        </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Cuboid">
+      <content>
+        <AnchorPane>
+          <Label layoutX="16.0" layoutY="19.0" prefHeight="32.0" prefWidth="218.0" text="Enter the Height of cuboid" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <TextField fx:id="cuboid_Height" layoutX="256.0" layoutY="20.0" prefHeight="25.0" prefWidth="175.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </TextField>
+          <Label layoutX="14.0" layoutY="213.0" prefHeight="40.0" prefWidth="117.0" text="Area :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Cuboid_Area" layoutX="233.0" layoutY="214.0" prefHeight="33.0" prefWidth="192.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+          <Pane layoutX="434.0" prefHeight="370.0" prefWidth="166.0" style="-fx-background-color: #214c91;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Button layoutX="28.0" layoutY="291.0" mnemonicParsing="false" onAction="#CuboidCalculate" prefHeight="26.0" prefWidth="110.0" text="Calculate " textFill="#214c91" />
+            <ImageView fitHeight="117.0" fitWidth="167.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@Hello/Shape.png" />
+              </image>
+            </ImageView>
+          </Pane>
+          <Label layoutX="15.0" layoutY="297.0" prefHeight="31.0" prefWidth="138.0" text="Volume :" textFill="#214c91">
+            <font>
+              <Font name="System Italic" size="18.0" />
+            </font>
+          </Label>
+          <Label fx:id="Cuboid_Volume" layoutX="233.0" layoutY="304.0" prefHeight="36.0" prefWidth="157.0">
+            <font>
+              <Font size="14.0" />
+            </font>
+          </Label>
+               <Label layoutX="16.0" layoutY="63.0" prefHeight="33.0" prefWidth="233.0" text="Enter the width of cuboid" textFill="#214c91">
+                  <font>
+                     <Font name="System Italic" size="18.0" />
+                  </font>
+               </Label>
+               <TextField fx:id="cuboid_width" layoutX="255.0" layoutY="67.0" prefHeight="28.0" prefWidth="177.0">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </TextField>
+               <TextField fx:id="cuboid_depth" layoutX="255.0" layoutY="117.0" prefHeight="25.0" prefWidth="176.0">
+                  <font>
+                     <Font size="14.0" />
+                  </font>
+               </TextField>
+               <Label layoutX="16.0" layoutY="117.0" prefHeight="28.0" prefWidth="214.0" text="Enter the depth of cuboid" textFill="#214c91">
+                  <font>
+                     <Font name="System Italic" size="18.0" />
+                  </font>
+               </Label>
+               <Label fx:id="Cuboid_error" layoutX="256.0" layoutY="155.0" prefHeight="13.0" prefWidth="174.0" textFill="RED" />
+        </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
